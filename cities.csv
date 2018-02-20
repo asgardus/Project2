@@ -1,0 +1,31 @@
+﻿city,city_ascii,lat,lng,pop,country,iso2,iso3,province
+Buenos Aires,Buenos Aires,-34.60250161,-58.39753137,11862073,Argentina,AR,ARG,Ciudad de Buenos Aires
+Melbourne,Melbourne,-37.82003131,144.9750162,2131812.5,Australia,AU,AUS,Victoria
+Ottawa,Ottawa,45.4166968,-75.7000153,978564.5,Canada,CA,CAN,Ontario
+Santiago,Santiago,-33.45001382,-70.66704085,2883305.5,Chile,CL,CHL,RegiÃ³n Metropolitana de Santiago
+Beijing,Beijing,39.92889223,116.3882857,9293300.5,China,CN,CHN,Beijing
+Cairo,Cairo,30.04996035,31.24996822,9813807,Egypt,EG,EGY,Al Qahirah
+Tbilisi,Tbilisi,41.72500999,44.79079545,1052628.5,Georgia,GE,GEO,Tbilisi
+Berlin,Berlin,52.52181866,13.40154862,3250007,Germany,DE,DEU,Berlin
+Delhi,Delhi,28.6699929,77.23000403,11779606.5,India,IN,IND,Delhi
+Baghdad,Baghdad,33.3386485,44.39386877,5054000,Iraq,IQ,IRQ,Baghdad
+Tokyo,Tokyo,35.68501691,139.7514074,22006299.5,Japan,JP,JPN,Tokyo
+Amman,Amman,31.95002525,35.93329993,1060000,Jordan,JO,JOR,Amman
+Mexico City,Mexico City,19.44244244,-99.1309882,14919501,Mexico,MX,MEX,Distrito Federal
+Chisinau,Chisinau,47.00502362,28.85771114,662064,Moldova,MD,MDA,Chisinau
+Rabat,Rabat,34.02529909,-6.83613082,1680376.5,Morocco,MA,MAR,Rabat - SalÃ© - Zemmour - Zaer
+Auckland,Auckland,-36.850013,174.7649808,759510,New Zealand,NZ,NZL,Auckland
+Abuja,Abuja,9.083333149,7.533328002,869067.5,Nigeria,NG,NGA,Federal Capital Territory
+Lima,Lima,-12.04801268,-77.05006209,7385117,Peru,PE,PER,Lima
+Manila,Manila,14.60415895,120.9822172,7088787.5,Philippines,PH,PHL,Metropolitan Manila
+Warsaw,Warsaw,52.25000063,20.99999955,1704569.5,Poland,PL,POL,Masovian
+Bucharest,Bucharest,44.4333718,26.09994665,1842097,Romania,RO,ROU,Bucharest
+Moscow,Moscow,55.75216412,37.61552283,10452000,Russia,RU,RUS,Moskva
+Belgrade,Belgrade,44.81864545,20.46799068,1099000,Serbia,RS,SRB,Grad Beograd
+Cape Town,Cape Town,-33.92001097,18.43498816,2823929,South Africa,ZA,ZAF,Western Cape
+Seoul,Seoul,37.5663491,126.999731,9796000,South Korea,KR,KOR,Seoul
+Madrid,Madrid,40.40002626,-3.683351686,2808718.5,Spain,ES,ESP,Comunidad de Madrid
+Stockholm,Stockholm,59.35075995,18.09733473,1258654.5,Sweden,SE,SWE,Stockholm
+Istanbul,Istanbul,41.10499615,29.01000159,10003305,Turkey,TR,TUR,Istanbul
+Montevideo,Montevideo,-34.85804157,-56.17105229,759162,Uruguay,UY,URY,Montevideo
+"Washington, D.C.","Washington, D.C.",38.89954938,-77.00941858,2445216.5,United States of America,US,USA,District of Columbia

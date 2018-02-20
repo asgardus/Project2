@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style>
+path {
+  stroke: white;
+  stroke-width: 0.25px;
+  fill: grey;
+}
+.quelist {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+div.wvs {
+	
+	display: none;
+	
+}
+.text {
+	background-color: tomato;
+    color: white;
+    padding: 10px;
+    font-family: verdana
+}
+</style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>
+<script>src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"</script>
+<script>
+	d3.csv("V10W3.csv", function(error1, data1) {
+	d3.csv("V10W4.csv", function(error2, data2) {
+	d3.csv("V10W5.csv", function(error3, data3) {
+	d3.csv("V10W6.csv", function(error4, data4) {
+	d3.csv("V24W3.csv", function(error5, data5) {
+	d3.csv("V24W4.csv", function(error6, data6) {
+    d3.csv("V24W5.csv", function(error7, data7) {
+    d3.csv("V24W6.csv", function(error8, data8) {
+    d3.csv("V66W3.csv", function(error9, data9) {
+    d3.csv("V66W4.csv", function(error10, data10) {
+    d3.csv("V66W5.csv", function(error11, data11) {
+    d3.csv("V66W6.csv", function(error12, data12) {
+    d3.csv("V84W3.csv", function(error13, data13) {
+    d3.csv("V84W4.csv", function(error14, data14) {
+    d3.csv("V84W5.csv", function(error15, data15) {
+    d3.csv("V84W6.csv", function(error16, data16) {
+    d3.csv("V96W3.csv", function(error17, data17) {
+    d3.csv("V96W4.csv", function(error18, data18) {
+    d3.csv("V96W5.csv", function(error19, data19) {
+    d3.csv("V96W6.csv", function(error20, data20) {
+    d3.csv("V111W3.csv", function(error21, data21) {
+    d3.csv("V111W4.csv", function(error22, data22) {
+    d3.csv("V111W5.csv", function(error23, data23) {
+	d3.csv("V111W6.csv", function(error24, data24) {
+    d3.csv("V126W3.csv", function(error25, data25) {
+    d3.csv("V126W4.csv", function(error26, data26) {
+    d3.csv("V126W5.csv", function(error27, data27) {
+    d3.csv("V126W6.csv", function(error28, data28) {
+    d3.csv("V143W3.csv", function(error29, data29) {
+    d3.csv("V143W4.csv", function(error30, data30) {
+    d3.csv("V143W5.csv", function(error31, data31) {
+    d3.csv("V143W6.csv", function(error32, data32) {
+	
+var width = 990;
+    height = 760;
+
+var projection = d3.geo.mercator()
+    .center([0, 60])
+    .scale(150)
+    .rotate([0,0,0]);
+
+var svg1 = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var g = svg1.append("g");
+
+// load and display the World
+d3.json("world-110m2.json", function(error, topology) {
+    g.selectAll("path")
+      .data(topojson.object(topology, topology.objects.countries)
+          .geometries)
+    .enter()
+      .append("path")
+      .attr("d", path)
+      
+d3.csv("cities.csv",function(error,data) {
+	g.selectAll("circle")
+	.data(data)
+	.enter()
+	.append("circle")
+           .attr("cx", function(d) {
+                   return projection([d.lng, d.lat])[0];
+           })
+           .attr("cy", function(d) {
+                   return projection([d.lng, d.lat])[1];
+           })
+           .attr("r", 2)
+           .style("fill", "red");
+			
+           
+	g.selectAll("text")
+       .data(data)
+       .enter()
+     .append("text") // append text
+       .attr("x", function(d) {
+               return projection([d.lng, d.lat])[0];
+       })
+       .attr("y", function(d) {
+               return projection([d.lng, d.lat])[1];
+       })
+       .attr("dy", -7) // set y position of bottom of text
+      .style("fill", "black") // fill the text with the colour black
+      .attr("text-anchor", "middle") // set anchor y justification
+      .text(function(d) {return d.country;}); // define the text to display
+});
+
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+       g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+});
+
+svg1.call(zoom)
+});
+	function trust(){};
+	function war(){};
+	function politics(){};
+	function money(){};
+	function media(){};
+	function un(){};
+	function phil(){};
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+  });
+});
+</script>
+<script>
+	function toggle() {
+  var div = document.getElementById('ql');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+};
+	function myFunction() {
+  var div1 = document.getElementById('WVS');
+    if (div1.style.display !== 'none') {
+        div1.style.display = 'none';
+    }
+    else {
+        div1.style.display = 'block';
+    }
+}
+</script>
+<button onclick="myFunction()">Show WVS Analytical Trail</button>
+<div class="wvs" id="WVS">
+	<center><h1 id="title">WVS Analytical Trail<br><br>Objective: To compare the happiness levels for selected countries and figure out how it changed over the years..</h1>
+	<p class="text">The first page asks for selection of a wave which is folowed by country selection.</p>
+	<img class="pics" src="pic1.png" alt="Pic1">
+	<p class="text">A random set of countries is chosen to analyze.</p>
+	<img class="pics" src="pic2.png" alt="Pic1">
+	<p class="text">The feeling of happiness is the variable analyzed</p>
+	<img class="pics" src="pic3.png" alt="Pic1">
+	<p class="text">On selecting show, the tabulated data is displayed. This doesn't really tell us anything unless manually analyzed by rows and columns</p>
+	<img class="pics" src="pic4.png" alt="Pic1">
+	<p class="text">After clicking on the maps tab, the "Happiness Index" of all the countries in the world is displayed and color coded to scale. To find the<br>country with the highest index, I use the slider and set it at the maximum, coming down. The first countries to show up are Uzbekistan and Kyrgyzstan followed by Sweden.
+	<br>Next, I click on the European map thumbnail whichs opens up the geo chloropleth of Europe. Evidently, Sweden ranks highest here</p>
+	<img class="pics" src="pic13.png" alt="Pic1">
+	<img class="pics" src="pic5.png" alt="Pic1">
+	<p class="text">Moving on, I decided to see how the happiness levels have changed over time. For this, I use the timeseries tab. It displayed the percentage of a particular answer for each country over the years
+	<br>There is a general decline in the percentage of people being very happy in Sweden over the years while in India,the trend is slightly positive. Japan has the most consistent percentage of very happy people for the past 2 decades.</p>
+	<img class="pics" src="pic6.png" alt="Pic1">
+	<p class="text">The settings provide options like filtering out selected countries and time periods of choice, which wasn't needed for the present analysis.</p>
+	<img class="pics" src="pic7.png" alt="Pic1">
+	<p class="text">Onto some aggregate properties, the pie chart shows the distribution of people in the whole selected dataset. It is apparent that majority of the people fall in the rather happy category. This is for the wave 6 period only though.</p>
+	<img class="pics" src="pic8.png" alt="Pic1">
+	<p class="text">The country with the highest amount of people in each category: Pakistan (very happy), Sweden (rather happy), Argentina (not very happy) and Pakistan (not at all).<br>Interestingly, Pakistan has the highest number of very happy and unhappy people among the group.</p>
+	<img class="pics" src="pic9.png" alt="Pic1">
+	<p class="text">Finally, the group of selected countries are looked over the whole time period. There are zero values in some points which might indicate lack of data for that wave period.</p>
+	<img class="pics" src="pic10.png" alt="Pic1">
+	<img class="pics" src="pic11.png" alt="Pic1">
+	<img class="pics" src="pic12.png" alt="Pic1"></center>
+	</div>
+<div class="selectques">
+	<button onclick="toggle()">Select Question</button>
+		<div class="quelist" id="ql">
+			<select>
+		<option value="happy">HAPPINESS: Considering everything, how happy would you say you are?</option>
+		<option value="trust">TRUST: How careful would you say one has to be in dealing with people?</option>
+		<option value="war">WAR: If, god forbid, there is a war, would you be willing to fight for your country?</option>
+		<option value="pol">POLITICS: How interested would you say you are in your country's political scenario?</option>
+		<option value="inc">MONEY: How important do you consider income to be in life?</option>
+		<option value="telly">MEDIA: How much confidence do you have in what you see on the television?</option>
+		<option value="un">WORLD: How much confidence do you have in the United Nations?</option>
+		<option value="phil">PHILOSOPHY: How often do you think about life?</option></select>
+</div>
+<div> <h6>Ansh Gandhi</h6> </div>
+</body>
+</html>
